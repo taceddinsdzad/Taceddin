@@ -1,0 +1,50 @@
+CREATE DATABASE APTEK
+
+USE APTEK
+
+CREATE TABLE Depot(
+
+Id INT PRIMARY KEY IDENTITY,
+[Name] VARCHAR(50) UNIQUE NOT NULL,
+City NVARCHAR(50) UNIQUE NOT NULL,
+ZipCode INT UNIQUE NOT NULL
+)
+INSERT INTO Depot VALUES
+('Zeferan',N'Lənkaran','1111'),
+('Kanom',N'Lerik','1112'),
+('Vilesh',N'Masalli','1113'),
+('Alma','Astara','1114')
+
+CREATE TABLE Mediciens (
+
+Id INT PRIMARY KEY IDENTITY,
+[Name] VARCHAR(50) UNIQUE NOT NULL,
+Manufacture VARCHAR(25) NOT NULL,
+Price DECIMAL(2) NOT NULL
+)
+
+
+INSERT INTO Mediciens VALUES
+('Parachitamol','EmilMMC',2.25),
+('Nurafen','AllahverdiMMC',1.20),
+('Tetrasklin','HuseyinMMc',0.80),
+('Huseyin','Sirab',40)
+
+
+CREATE TABLE Pharmacy(
+Id INT PRIMARY KEY IDENTITY,
+[Name] VARCHAR(50) UNIQUE NOT NULL,
+City VARCHAR(25) UNIQUE NOT NULL,
+Zipcode INT UNIQUE NOT NULL
+
+)
+
+INSERT INTO Pharmacy VALUES
+('Zeferan aptek',N'Lənkaran','1111'),
+('Kanom aptek',N'Lerik','1112'),
+('Vilesh aptek',N'Masalli','1113'),
+('Alma aptek','Astara','1114')
+
+
+
+
